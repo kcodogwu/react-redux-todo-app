@@ -2,7 +2,7 @@
   "name": "react-redux-todo-app",
   "version": "1.0.0",
   "description": "A simple app built while learning about React and Redux.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "npm run clean && npm run build-app && npm run build-lib && npm run build-public && npm run build-server",
     "build-actions": "webpack -p --config actions.config.js",
