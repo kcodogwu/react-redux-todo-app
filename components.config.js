@@ -1,9 +1,13 @@
 module.exports = {
     entry: {
-        hello: './components/hello.js'
+        App: './components/App.js',
+        Footer: './components/Footer.js',
+        Link: './components/Link.js',
+        Todo: './components/Todo.js',
+        TodoList: './components/TodoList.js',
     },
     output: {
-        path: './build/lib',
+        path: './build/components',
         filename: '[name].js'
     },
     module: {

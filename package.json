@@ -4,16 +4,17 @@
   "description": "A simple app built while learning about React and Redux.",
   "main": "server.js",
   "scripts": {
-    "build": "npm run clean && npm run build-app && npm run build-lib && npm run build-public && npm run build-server",
+    "build": "npm run clean && npm run build-actions && npm run build-app && npm run build-components && npm run build-containers && npm run build-public && npm run build-reducers && npm run build-server",
     "build-actions": "webpack -p --config actions.config.js",
     "build-app": "babel app.js -o build/app.js",
     "build-components": "webpack -p --config components.config.js",
     "build-containers": "webpack -p --config containers.config.js",
     "build-public": "webpack -p --config public.config.js",
+    "build-reducers": "webpack -p --config reducers.config.js",
     "build-server": "babel server.js -o build/server.js",
-    "clean": "rd build /s /q && md build && md build\\lib && md build\\public\\js",
+    "clean": "rd build /s /q && md build && md build\\actions && md build\\components && md build\\containers && md build\\public\\js && md build\\reducers",
     "check": "npm run lint && npm run build",
-    "lint": "eslint lib && eslint public/js",
+    "lint": "eslint actions && eslint components && eslint containers && eslint public/js && eslint reducers",
     "start": "npm run check && node build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -47,7 +48,10 @@
     "eslint-plugin-react": "6.7.1"
   },
   "dependencies": {
+    "express": "4.14.0",
     "react": "^15.4.0",
-    "react-dom": "^15.4.0"
+    "react-dom": "^15.4.0",
+    "react-redux": "4.4.6",
+    "redux": "3.6.0"
   }
 }

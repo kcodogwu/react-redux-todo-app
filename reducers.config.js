@@ -1,9 +1,11 @@
 module.exports = {
     entry: {
-        index: './actions/index.js'
+        index: './reducers/index.js',
+        todos: './reducers/todos.js',
+        visibilityFilters: './reducers/visibilityFilters.js',
     },
     output: {
-        path: './build/actions',
+        path: './build/reducers',
         filename: '[name].js'
     },
     module: {

@@ -1,6 +1,8 @@
 module.exports = {
     entry: {
-        hello: './containers/hello.js'
+        AddTodo: './containers/AddTodo.js',
+        FilterLink: './containers/FilterLink.js',
+        VisibleTodoList: './containers/VisibleTodoList.js',
     },
     output: {
         path: './build/containers',
